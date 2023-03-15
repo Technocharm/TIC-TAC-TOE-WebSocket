@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/clientview.css">
+    <title>Multiplayer Game</title>
+</head>
+<body>
+    <h1><span style="color:greenyellow">X\O</span> TIC TAC TOE <span style="color:greenyellow">O/X</span></h1>
+    <div class="container">
+        <div class="sidebar">
+            <p class="gamejoinedid" style="text-align: center;"></p>
+            <button class="cntbtn">Connect</button>
+            <button class="crtbtn">Create</button>
+            <label for="">Available Room</label>
+            <ul>
+                <li>No Active</li>
+            </ul>
+            <button class="jnbtn">Join</button>
+            <button class="newbtn" onclick="window.location.reload()">New Match</button>
+            <button class="exitgame" onclick="window.location.reload()">Quit Game</button>
+        </div>
+        <div class="mainbar">
+            <div class="board">
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+                <div class="cell"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/client.js" defer></script>
+</body>
+</html>
