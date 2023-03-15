@@ -168,13 +168,9 @@ create.addEventListener("click", () => {
 });
 
 newbtn.addEventListener("click", () => {
-  socket.send(
-    JSON.stringify({
-      'tag': "join",
-      'clientId': clientId,
-      'gameId': gameId,
-    })
-  );
+  socket = new WebSocket("wss://tic-tac-toe-fkil.onrender.com");
+  socket.onmessage = onMessage;
+  src.target.disabled = true;
 });
 
 // exitbtn.addEventListener("click",()=>{
