@@ -167,6 +167,16 @@ create.addEventListener("click", () => {
   );
 });
 
+newbtn.addEventListener("click", () => {
+  socket.send(
+    JSON.stringify({
+      'tag': "join",
+      'clientId': clientId,
+      'gameId': gameId,
+    })
+  );
+});
+
 exitbtn.addEventListener("click",()=>{
     socket.send(
         JSON.stringify({
