@@ -27,8 +27,8 @@ newbtn.disabled = true
 const exitbtn = document.querySelector(".exitgame");
 
 connect.addEventListener("click", (src) => {
-  socket = new WebSocket("ws://localhost:8000");
-//   socket = new WebSocket("wss://sok.onrender.com");
+//   socket = new WebSocket("ws://localhost:8000");
+  socket = new WebSocket("ws://https://tic-tac-toe-fkil.onrender.com:10000");
   socket.onmessage = onMessage;
   src.target.disabled = true;
 });
