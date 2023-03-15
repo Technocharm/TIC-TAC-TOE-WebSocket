@@ -22,8 +22,8 @@ const board = document.querySelector(".board");
 const list = document.querySelector("ul");
 const connect = document.querySelector(".cntbtn");
 const sidebar = document.querySelector(".sidebar");
-// const newbtn = document.querySelector(".newbtn");
-// newbtn.disabled = true
+const newbtn = document.querySelector(".newbtn");
+newbtn.disabled = true
 // const exitbtn = document.querySelector(".exitgame");
 
 connect.addEventListener("click", (src) => {
@@ -103,16 +103,16 @@ function onMessage(msg) {
     case 'winner':
         alert(`The winner is ${data.winner}`)
         // close()
-//         newbtn.disabled= false;
+        newbtn.disabled= false;
         cells.disabled=true;
         break
     case 'gameDraw':
         alert('The game is Draw')
-//         newbtn.disabled= false;
+        newbtn.disabled= false;
         break
     case 'exited':
         alert("Player left , Join a new game using New Game Button OR You can also quit and start again" );
-//         newbtn.disabled= false;
+        newbtn.disabled= false;
   }
 }
 
@@ -167,15 +167,15 @@ create.addEventListener("click", () => {
   );
 });
 
-// newbtn.addEventListener("click", () => {
-//   socket.send(
-//     JSON.stringify({
-//       'tag': "join",
-//       'clientId': clientId,
-//       'gameId': gameId,
-//     })
-//   );
-// });
+newbtn.addEventListener("click", () => {
+  socket.send(
+    JSON.stringify({
+      'tag': "join",
+      'clientId': clientId,
+      'gameId': gameId,
+    })
+  );
+});
 
 // exitbtn.addEventListener("click",()=>{
 //     socket.send(
