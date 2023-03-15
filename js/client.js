@@ -28,7 +28,7 @@ const exitbtn = document.querySelector(".exitgame");
 
 connect.addEventListener("click", (src) => {
 //   socket = new WebSocket("ws://localhost:8000");
-  socket = new WebSocket("ws://tic-tac-toe-fkil.onrender.com");
+  socket = new WebSocket("wss://tic-tac-toe-fkil.onrender.com");
   socket.onmessage = onMessage;
   src.target.disabled = true;
 });
